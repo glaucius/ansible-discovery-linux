@@ -8,7 +8,7 @@
     clone: no
     update: no
 - name: Rodar o discovery 
-  command: sh /tmp/ansible-discovery-linux/discovery.sh
+  shell: sh /tmp/ansible-discovery-linux/discovery.sh
 
 - name: Resgata o report do servidor remoto
   fetch:
