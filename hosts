@@ -10,6 +10,7 @@ servidor04
 
 [azure]
 servidor05
+servidor06
 
 [todos:vars]
 ansible_ssh_user=centos
