@@ -1,6 +1,6 @@
 #!/bin/sh
 rm -rf /tmp/discovery
-mkdir -p /tmp/discory
+mkdir -p /tmp/discovery
 _hostname=`hostname`
 echo HOSTNAME > /tmp/discovery/$_hostname.discovery.txt
 hostname > /tmp/discovery/$_hostname.discovery.txt
