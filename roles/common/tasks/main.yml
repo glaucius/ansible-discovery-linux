@@ -5,9 +5,6 @@
   git: 
     repo: "{{ repository }}"
     dest: /tmp/
-    clone: no
-    update: yes
-    force: yes
 
 - name: Rodar o discovery 
   shell: sh /tmp/ansible-discovery-linux/discovery.sh
