@@ -10,6 +10,11 @@
     path: /tmp/stage-discovery/
     state: directory
 
+- name: Cria a area manobra logs
+  file:
+    path: /tmp/stage-discovery/logs/
+    state: directory
+
 - name: Copia o codigo do repositorio
   git: 
     repo: "{{ repository }}"
@@ -19,6 +24,7 @@
   shell: sh /tmp/stage-discovery/discovery.sh
 
 - name: Resgata o report do servidor remoto
-  fetch:
-    src: /tmp/stage-discovery/
-    dest: /tmp/
+  shell: (cd /tmp/stage-discovery/logs; find . -maxdepth 1 -type f) | cut -d'/' -f2
+    register: files_to_copy
+  fetch: src=/tmp/stage-discovery/logs/{{ item }} dest=/tmp/
+    with_items: files_to_copy.stdout_lines
