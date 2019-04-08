@@ -7,4 +7,4 @@ uptime
 echo "###### MEM "
 free 
 echo "###### DISCOS "
-df -h 
+df -h

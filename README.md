@@ -30,4 +30,3 @@ Os reports em txt depois coletados estarão disponíveis em /tmp/reports
 5 - Boa sorte
 
 Entre em contato se precisar de ajuda, glaucius@gmail.com
-

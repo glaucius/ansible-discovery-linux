@@ -1,5 +1,5 @@
 ---
-# Tarefas que serão executadas em todos os nós
+# Playbook de discovery
 
 - name: Organizar workspace
   file:
