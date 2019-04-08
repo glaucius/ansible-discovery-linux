@@ -13,7 +13,10 @@
     clone: yes
     update: yes
 
-- name: Checkout de repositorio
+- name: Garantir prerrogativas de execucao
   file:
     path: /tmp/stage-discovery/discovery.sh
     mode: 0755
+
+- name: Executar procedimentos
+  shell: /tmp/stage-discovery/discovery.sh > /tmp/stage-discovery/{{ ansible_hostname }}".discovery.txt
