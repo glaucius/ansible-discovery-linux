@@ -1,11 +1,11 @@
 ---
 # Tarefas que serão executadas em todos os nós
-- name: Remover area temporária
+- name: Remover area manobra
   file:
     path: /tmp/stage-discovery
     state: absent
 
-- name: Cria a área temporária
+- name: Cria a area manobra
   file:
     path: /tmp/stage-discovery/
     state: directory
@@ -16,7 +16,7 @@
     dest: /tmp/stage-discovery/
 
 - name: Rodar o discovery 
-  shell: sh /tmp/stage-discovery/ansible-discovery-linux/discovery.sh
+  shell: sh /tmp/stage-discovery/discovery.sh
 
 - name: Resgata o report do servidor remoto
   fetch:
