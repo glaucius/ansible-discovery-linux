@@ -2,7 +2,7 @@
 # Tarefas que serão executadas em todos os nós
 
 - name: Copia o codigo do repositorio
-  git: repo={{ repository }} dest=/tmp/ansible-discovery-linux/
+  git: repo={{ repository }} dest=/tmp/
 
 - name: Rodar o discovery 
   command: sh /tmp/ansible-discovery-linux/discovery.sh
