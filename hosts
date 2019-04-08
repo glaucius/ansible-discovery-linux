@@ -1,13 +1,8 @@
-[aws-us-east-2]
-ns1.drivus.com.br
+[todos]
+servidor01
+servidor02
+servidor03
 
-[aws-us-east-1]
-ns2.drivus.com.br
- 
-[aws-us-east-2:vars]
+[todos:vars]
 ansible_ssh_user=centos
-ansible_ssh_private_key_file=/home/centos/ansible/drivus-ohio.pem
-
-[aws-us-east-1:vars]
-ansible_ssh_user=centos
-ansible_ssh_private_key_file=/home/centos/ansible/drivus-virginia.pem
+ansible_ssh_private_key_file=/path/arquivo.pem
