@@ -1,7 +1,7 @@
 ---
 # Tarefas que serão executadas em todos os nós
 
-- name: Remover workspace
+- name: Organizar workspace
   file:
    path: /tmp/stage-discovery
    state: absent
