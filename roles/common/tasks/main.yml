@@ -1,15 +1,24 @@
 ---
 # Tarefas que serão executadas em todos os nós
+- name: Remover area temporária
+  file:
+    path: /tmp/stage-discovery
+    state: absent
+
+- name: Cria a área temporária
+  file:
+    path: /tmp/stage-discovery/
+    state: directory
 
 - name: Copia o codigo do repositorio
   git: 
     repo: "{{ repository }}"
-    dest: /tmp/tmp2/
+    dest: /tmp/stage-discovery/
 
 - name: Rodar o discovery 
-  shell: sh /tmp/tmp2/ansible-discovery-linux/discovery.sh
+  shell: sh /tmp/stage-discovery/ansible-discovery-linux/discovery.sh
 
 - name: Resgata o report do servidor remoto
   fetch:
-    src: /tmp/discovery/
+    src: /tmp/stage-discovery/
     dest: /tmp/
