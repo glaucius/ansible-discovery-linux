@@ -3,7 +3,7 @@
 
 - name: Copia o codigo do repositorio
   git: 
-    repo: {{ repository }} 
+    repo: "{{ repository }}"
     dest: /tmp/
     clone: no
     update: no
