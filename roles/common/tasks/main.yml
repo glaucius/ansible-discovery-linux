@@ -20,3 +20,8 @@
 
 - name: Executar procedimentos
   shell: /tmp/stage-discovery/discovery.sh >> /tmp/stage-discovery/{{ ansible_hostname }}.discovery.txt
+
+- name: Coletar arquivo e finalizar processo
+  fetch:
+    src: /tmp/stage-discovery/{{ ansible_hostname }}.discovery.txt
+    dest: /home/centos/reports/
