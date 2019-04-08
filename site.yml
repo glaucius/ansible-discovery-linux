@@ -1,7 +1,7 @@
 ---
 # Executa o deploy em todos os servidores remotos cadastrados no arquivo hosts
 
-- name: Executar discovery
+- name: Executar discovery em todos os hosts
   hosts: all
 
   roles:
