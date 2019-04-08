@@ -6,8 +6,6 @@
   args:
     executable: /bin/bash
 
-
-
 - name: Copia o codigo do repositorio
   git: 
     repo: "{{ repository }}"
@@ -16,10 +14,7 @@
     update: yes
 
 - name: Rodar o discovery 
-  shell: sh /tmp/stage-discovery/discovery.sh > /tmp/stage-discovery/logs/{{ inventory_hostname }}.delivery.txt"
-
-- name: Resgata o report do servidor remoto
-  shell: "ls /tmp/stage-discovery/logs/{{ inventory_hostname }}.delivery.txt"
+  shell: sh /tmp/stage-discovery/discovery.sh > /tmp/stage-discovery/logs/"{{ inventory_hostname }}".delivery.txt
 
 
 
