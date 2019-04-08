@@ -2,13 +2,25 @@
 # Tarefas que serão executadas em todos os nós
 
 - name: Organizar workspace
-  file:
-   path: /tmp/stage-discovery
-   state: absent
+    file:
+        path: /tmp/stage-discovery
+        state: absent
 
 - name: Checkout de repositorio
+    git: 
+        repo: "{{ repository }}"
+        dest: /tmp/stage-discovery/
+        clone: yes
+        update: yes
+
+- name: Garantir prerrogativa execucao
+    file:
+        path: /tmp/stage-discovery/discovery.sh
+        mode: 0755
+
+- name: Executar procedimentos
   git: 
-    repo: "{{ repository }}"
-    dest: /tmp/stage-discovery/
-    clone: yes
-    update: yes
+        repo: "{{ repository }}"
+        dest: /tmp/stage-discovery/
+        clone: yes
+        update: yes
