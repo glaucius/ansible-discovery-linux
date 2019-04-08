@@ -9,5 +9,5 @@
 
 - name: Resgata o report do servidor remoto
   fetch:
-    src: /tmp/*.discovery.txt
+    src: /tmp/discovery/
     dest: /tmp/
