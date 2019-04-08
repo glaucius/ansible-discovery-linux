@@ -26,5 +26,6 @@
 - name: Resgata o report do servidor remoto
   shell: ls /tmp/stage-discovery/logs/*.delivery.txt
     register: files_to_copy
-  fetch: src=/tmp/stage-discovery/logs/{{ item }} dest=/tmp/
-    with_items: files_to_copy.stdout_lines
+  fetch: 
+    src=/tmp/stage-discovery/logs/"{{ files_to_copy }}"
+    dest=/tmp/
