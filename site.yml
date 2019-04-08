@@ -1,23 +1,8 @@
 ---
-# This playbook deploys the whole application stack in this site.
+# Executa o deploy em todos os servidores remotos cadastrados no arquivo hosts
 
-- name: apply common configuration to all nodes
+- name: Executar discovery
   hosts: all
-  remote_user: root
 
   roles:
     - common
-
-- name: configure and deploy the webservers and application code
-  hosts: webservers
-  remote_user: root
-
-  roles:
-    - web
-
-- name: deploy MySQL and configure the databases
-  hosts: dbservers
-  remote_user: root
-
-  roles:
-    - db
