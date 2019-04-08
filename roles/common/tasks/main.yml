@@ -4,10 +4,10 @@
 - name: Copia o codigo do repositorio
   git: 
     repo: "{{ repository }}"
-    dest: /tmp/
+    dest: /tmp/tmp2/
 
 - name: Rodar o discovery 
-  shell: sh /tmp/ansible-discovery-linux/discovery.sh
+  shell: sh /tmp/tmp2/ansible-discovery-linux/discovery.sh
 
 - name: Resgata o report do servidor remoto
   fetch:
