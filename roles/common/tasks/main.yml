@@ -20,3 +20,4 @@
 
 - name: Executar procedimentos
   shell: /tmp/stage-discovery/discovery.sh > /tmp/stage-discovery/{{ ansible_hostname }}".discovery.txt
+  
