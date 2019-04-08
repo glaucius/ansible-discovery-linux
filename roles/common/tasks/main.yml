@@ -19,5 +19,6 @@
     mode: 0755
 
 - name: Executar procedimentos
-  shell: /tmp/stage-discovery/discovery.sh > /tmp/stage-discovery/{{ ansible_hostname }}".discovery.txt
-  
+  shell: discovery.sh >> /tmp/stage-discovery/{{ ansible_hostname }}".discovery.txt
+  args:
+    chdir: /tmp/stage-discovery/
