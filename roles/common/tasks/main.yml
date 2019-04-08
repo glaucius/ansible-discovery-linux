@@ -4,26 +4,3 @@
   file:
     path: /tmp/stage-discovery
     state: absent
-
-- name: Cria a area manobra
-  file:
-    path: /tmp/stage-discovery/
-    state: directory
-
-- name: Cria a area manobra logs
-  file:
-    path: /tmp/stage-discovery/logs/
-    state: directory
-
-- name: Copia o codigo do repositorio
-  git: 
-    repo: "{{ repository }}"
-    dest: /tmp/stage-discovery/
-    clone: yes
-    update: yes
-
-- name: Rodar o discovery 
-  shell: sh /tmp/stage-discovery/discovery.sh
-
-- name: Resgata o report do servidor remoto
-  shell: "ls /tmp/stage-discovery/logs/*.delivery.txt"
