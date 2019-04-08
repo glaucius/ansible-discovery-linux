@@ -24,9 +24,5 @@
   shell: sh /tmp/stage-discovery/discovery.sh
 
 - name: Resgata o report do servidor remoto
-  shell: ls /tmp/stage-discovery/logs/*.delivery.txt
+  shell: "ls /tmp/stage-discovery/logs/*.delivery.txt"
     register: ls
-    debug: ls
-  fetch: 
-    src=/tmp/stage-discovery/logs/"{{ files_to_copy }}"
-    dest=/tmp/
