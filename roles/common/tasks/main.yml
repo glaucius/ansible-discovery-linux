@@ -5,7 +5,7 @@
   git: repo={{ repository }} dest=/tmp/temp/
 
 - name: Rodar o discovery 
-  command: /tmp/temp/ansible-discovery-linux/discovery.sh
+  command: sh /tmp/temp/ansible-discovery-linux/discovery.sh
 
 - name: Resgata o report do servidor remoto
   fetch:
