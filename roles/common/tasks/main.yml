@@ -2,11 +2,11 @@
 # Tarefas que serão executadas em todos os nós
 
 - name: Remover workspace
-  shell: rm -rf /tmp/stage-discovery
-  args:
-    executable: /bin/bash
+  file:
+   path: /tmp/stage-discovery
+   state: absent
 
-- name: Copia o codigo do repositorio
+- name: Checkout de repositorio
   git: 
     repo: "{{ repository }}"
     dest: /tmp/stage-discovery/
