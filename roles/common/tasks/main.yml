@@ -25,4 +25,3 @@
 
 - name: Resgata o report do servidor remoto
   shell: "ls /tmp/stage-discovery/logs/*.delivery.txt"
-    register: ls
