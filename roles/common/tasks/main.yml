@@ -6,7 +6,7 @@
    path: /tmp/stage-discovery
    state: absent
 
-   
+
 - name: Checkout de repositorio
   git: 
     repo: "{{ repository }}"
@@ -17,12 +17,12 @@
 
 - name: Garantir prerrogativas de execucao
   file:
-    path: /tmp/stage-discovery/discovery.sh
+    path: /tmp/stage-discovery/master.sh
     mode: 0755
 
 
 - name: Executar procedimentos
-  shell: /tmp/stage-discovery/discovery.sh >> /tmp/stage-discovery/{{ ansible_hostname }}.discovery.txt
+  shell: /tmp/stage-discovery/master.sh >> /tmp/stage-discovery/{{ ansible_hostname }}.discovery.txt
 
 
 - name: Coletar arquivo e finalizar processo
