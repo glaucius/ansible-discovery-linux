@@ -1,10 +1,12 @@
 ---
 # Tarefas que serão executadas em todos os nós
 
-- name: Remover pasta manobra
-    shell: "rm -rf /tmp/stage-discovery"
-- name: Criar pasta manobra
-    shell: "mkdir -p /tmp/stage-discovery/logs"
+- name: Remover workspace
+  shell: rm -rf /tmp/stage-discovery
+  args:
+    executable: /bin/bash
+
+
 
 - name: Copia o codigo do repositorio
   git: 
