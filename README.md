@@ -5,7 +5,7 @@ Este playbook exige Ansible 2.7.9 ou superior
 
 Este playbook foi testado com servidores remotos CentOS 7.x, portanto, recomendamos que execute apenas nos recomendados.
 
-O playbook executa uma s�equência de comandos para investigação do host remoto.
+O playbook executa uma sequência de comandos para investigação do host remoto.
 
 Hostname, uptime, memória, cpu, disco, rede, serviços e outros.
 
