@@ -13,8 +13,8 @@ Como utilizar :
 
 1 - Faça o checkout do playbook
 
-# git clone https://github.com/glaucius/ansible-discovery-linux.git
-# cd ansible-discovery-linux
+git clone https://github.com/glaucius/ansible-discovery-linux.git
+cd ansible-discovery-linux
 
 2 - Configurar o arquivo `hosts` 
 
