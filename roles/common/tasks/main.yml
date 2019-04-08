@@ -5,7 +5,7 @@
   git: 
     repo: "{{ repository }}"
     dest: /tmp/
-    clone: yes
+    clone: no
     update: yes
     force: yes
 
