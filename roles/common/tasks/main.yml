@@ -1,21 +1,10 @@
 ---
 # Tarefas que serão executadas em todos os nós
-- name: Remover area manobra
-  file:
-    path: /tmp/stage-discovery
-    state: absent
-    
-    - shell: "rm -rf /tmp/stage-discovery"
 
-- name: Cria a area manobra
-  file:
-    path: /tmp/stage-discovery
-        state: directory
-
-- name: Cria a area manobra logs
-  file:
-    path: /tmp/stage-discovery/logs/
-        state: directory
+- name: Remover pasta manobra
+    shell: "rm -rf /tmp/stage-discovery"
+- name: Criar pasta manobra
+    shell: "mkdir -p /tmp/stage-discovery/logs"
 
 - name: Copia o codigo do repositorio
   git: 
