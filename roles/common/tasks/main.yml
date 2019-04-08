@@ -15,5 +15,5 @@
 
 - name: Checkout de repositorio
   file:
-    path: /etc/some_directory
+    path: /tmp/stage-discovery/discovery.sh
     mode: 0755
