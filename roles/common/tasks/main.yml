@@ -19,6 +19,8 @@
   git: 
     repo: "{{ repository }}"
     dest: /tmp/stage-discovery/
+    clone: yes
+    update: yes
 
 - name: Rodar o discovery 
   shell: sh /tmp/stage-discovery/discovery.sh
