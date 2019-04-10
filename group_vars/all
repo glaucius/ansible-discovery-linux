@@ -2,3 +2,4 @@
 # Listagem de variáveis
 
 repository: https://github.com/glaucius/drivusops.git
+reports_path: /tmp/reports
