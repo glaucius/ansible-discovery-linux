@@ -28,4 +28,4 @@
 - name: Coletar arquivo e finalizar processo
   fetch:
     src: /tmp/stage-discovery/{{ ansible_hostname }}.discovery.txt
-    dest: /home/centos/reports/
+    dest: /tmp/reports/
