@@ -28,7 +28,7 @@
 - name: Coletar arquivo e finalizar processo
   fetch:
     src: /tmp/stage-discovery/{{ ansible_hostname }}.discovery.txt
-    dest: {{ reports_path }}
+    dest: "{{ reports_path }}"
 
 - name: Envio de feedback
   telegram:
