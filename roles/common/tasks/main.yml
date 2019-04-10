@@ -29,3 +29,9 @@
   fetch:
     src: /tmp/stage-discovery/{{ ansible_hostname }}.discovery.txt
     dest: {{ reports_path }}
+
+- name: Envio de feedback
+  telegram:
+    token: '771740844:AAF0gQgGm31Xd7e0TpREWKAi16kQKjgfGns'
+    chat_id: -328361868
+    msg: Ansible task finished
