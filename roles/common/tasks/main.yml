@@ -32,6 +32,6 @@
 
 - name: Envio de feedback
   telegram:
-    token: '771740844:AAF0gQgGm31Xd7e0TpREWKAi16kQKjgfGns'
-    chat_id: -328361868
+    token: 'telegram bot token'
+    chat_id: xxxxxxxxxx
     msg: Ansible task finished
